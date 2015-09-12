@@ -105,6 +105,41 @@
                                                                                                             <field name="NUM">10000</field>
                                                                                                           </block>
                                                                                                         </value>
+                                                                                                        <next>
+                                                                                                          <block type="movement_stutter" id="627">
+                                                                                                            <next>
+                                                                                                              <block type="controls_whileUntil" id="650" inline="false">
+                                                                                                                <field name="MODE">WHILE</field>
+                                                                                                                <value name="NUMBER">
+                                                                                                                  <block type="sensor_light" id="667">
+                                                                                                                    <field name="LIGHT">LEFT</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <statement name="DO">
+                                                                                                                  <block type="movement_forward" id="660"></block>
+                                                                                                                </statement>
+                                                                                                                <next>
+                                                                                                                  <block type="robot_delay" id="669" inline="true">
+                                                                                                                    <value name="DELAY">
+                                                                                                                      <block type="math_number" id="676">
+                                                                                                                        <field name="NUM">4000</field>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                    <next>
+                                                                                                                      <block type="controls_if" id="841" inline="false">
+                                                                                                                        <value name="IF0">
+                                                                                                                          <block type="sensor_light" id="819">
+                                                                                                                            <field name="LIGHT">LEFT</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                      </block>
+                                                                                                                    </next>
+                                                                                                                  </block>
+                                                                                                                </next>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </next>
                                                                                                       </block>
                                                                                                     </next>
                                                                                                   </block>
