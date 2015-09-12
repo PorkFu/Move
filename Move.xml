@@ -85,55 +85,46 @@
                                                                                               </block>
                                                                                             </value>
                                                                                             <next>
-                                                                                              <block type="robot_delay" id="32" inline="true">
-                                                                                                <value name="DELAY">
-                                                                                                  <block type="math_number" id="33">
-                                                                                                    <field name="NUM">1000</field>
-                                                                                                  </block>
-                                                                                                </value>
+                                                                                              <block type="movement_stop" id="34">
                                                                                                 <next>
-                                                                                                  <block type="movement_stop" id="34">
+                                                                                                  <block type="movement_setmotors" id="35" inline="true">
+                                                                                                    <value name="BOTHMOVLEFT">
+                                                                                                      <block type="math_number" id="36">
+                                                                                                        <field name="NUM">10</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <value name="BOTHMOVRIGHT">
+                                                                                                      <block type="math_number" id="37">
+                                                                                                        <field name="NUM">10000</field>
+                                                                                                      </block>
+                                                                                                    </value>
                                                                                                     <next>
-                                                                                                      <block type="movement_setmotors" id="35" inline="true">
-                                                                                                        <value name="BOTHMOVLEFT">
-                                                                                                          <block type="math_number" id="36">
-                                                                                                            <field name="NUM">10</field>
-                                                                                                          </block>
-                                                                                                        </value>
-                                                                                                        <value name="BOTHMOVRIGHT">
-                                                                                                          <block type="math_number" id="37">
-                                                                                                            <field name="NUM">10000</field>
-                                                                                                          </block>
-                                                                                                        </value>
+                                                                                                      <block type="movement_stutter" id="38">
                                                                                                         <next>
-                                                                                                          <block type="movement_stutter" id="38">
+                                                                                                          <block type="controls_whileUntil" id="39" inline="false">
+                                                                                                            <field name="MODE">WHILE</field>
+                                                                                                            <value name="NUMBER">
+                                                                                                              <block type="sensor_light" id="40">
+                                                                                                                <field name="LIGHT">LEFT</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <statement name="DO">
+                                                                                                              <block type="movement_forward" id="41"></block>
+                                                                                                            </statement>
                                                                                                             <next>
-                                                                                                              <block type="controls_whileUntil" id="39" inline="false">
-                                                                                                                <field name="MODE">WHILE</field>
-                                                                                                                <value name="NUMBER">
-                                                                                                                  <block type="sensor_light" id="40">
-                                                                                                                    <field name="LIGHT">LEFT</field>
+                                                                                                              <block type="robot_delay" id="42" inline="true">
+                                                                                                                <value name="DELAY">
+                                                                                                                  <block type="math_number" id="43">
+                                                                                                                    <field name="NUM">4000</field>
                                                                                                                   </block>
                                                                                                                 </value>
-                                                                                                                <statement name="DO">
-                                                                                                                  <block type="movement_forward" id="41"></block>
-                                                                                                                </statement>
                                                                                                                 <next>
-                                                                                                                  <block type="robot_delay" id="42" inline="true">
-                                                                                                                    <value name="DELAY">
-                                                                                                                      <block type="math_number" id="43">
-                                                                                                                        <field name="NUM">4000</field>
+                                                                                                                  <block type="controls_if" id="44" inline="false">
+                                                                                                                    <value name="IF0">
+                                                                                                                      <block type="sensor_light" id="45">
+                                                                                                                        <field name="LIGHT">LEFT</field>
                                                                                                                       </block>
                                                                                                                     </value>
-                                                                                                                    <next>
-                                                                                                                      <block type="controls_if" id="44" inline="false">
-                                                                                                                        <value name="IF0">
-                                                                                                                          <block type="sensor_light" id="45">
-                                                                                                                            <field name="LIGHT">LEFT</field>
-                                                                                                                          </block>
-                                                                                                                        </value>
-                                                                                                                      </block>
-                                                                                                                    </next>
                                                                                                                   </block>
                                                                                                                 </next>
                                                                                                               </block>
