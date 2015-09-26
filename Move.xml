@@ -85,43 +85,43 @@
                                                                                               </block>
                                                                                             </value>
                                                                                             <next>
-                                                                                              <block type="movement_stop" id="34">
+                                                                                              <block type="movement_stop" id="32">
                                                                                                 <next>
-                                                                                                  <block type="movement_setmotors" id="35" inline="true">
+                                                                                                  <block type="movement_setmotors" id="33" inline="true">
                                                                                                     <value name="BOTHMOVLEFT">
-                                                                                                      <block type="math_number" id="36">
+                                                                                                      <block type="math_number" id="34">
                                                                                                         <field name="NUM">10</field>
                                                                                                       </block>
                                                                                                     </value>
                                                                                                     <value name="BOTHMOVRIGHT">
-                                                                                                      <block type="math_number" id="37">
+                                                                                                      <block type="math_number" id="35">
                                                                                                         <field name="NUM">10000</field>
                                                                                                       </block>
                                                                                                     </value>
                                                                                                     <next>
-                                                                                                      <block type="movement_stutter" id="38">
+                                                                                                      <block type="movement_stutter" id="36">
                                                                                                         <next>
-                                                                                                          <block type="controls_whileUntil" id="39" inline="false">
+                                                                                                          <block type="controls_whileUntil" id="37" inline="false">
                                                                                                             <field name="MODE">WHILE</field>
                                                                                                             <value name="NUMBER">
-                                                                                                              <block type="sensor_light" id="40">
+                                                                                                              <block type="sensor_light" id="38">
                                                                                                                 <field name="LIGHT">LEFT</field>
                                                                                                               </block>
                                                                                                             </value>
                                                                                                             <statement name="DO">
-                                                                                                              <block type="movement_forward" id="41"></block>
+                                                                                                              <block type="movement_forward" id="39"></block>
                                                                                                             </statement>
                                                                                                             <next>
-                                                                                                              <block type="robot_delay" id="42" inline="true">
+                                                                                                              <block type="robot_delay" id="40" inline="true">
                                                                                                                 <value name="DELAY">
-                                                                                                                  <block type="math_number" id="43">
+                                                                                                                  <block type="math_number" id="41">
                                                                                                                     <field name="NUM">4000</field>
                                                                                                                   </block>
                                                                                                                 </value>
                                                                                                                 <next>
-                                                                                                                  <block type="controls_if" id="44" inline="false">
+                                                                                                                  <block type="controls_if" id="42" inline="false">
                                                                                                                     <value name="IF0">
-                                                                                                                      <block type="sensor_light" id="45">
+                                                                                                                      <block type="sensor_light" id="43">
                                                                                                                         <field name="LIGHT">LEFT</field>
                                                                                                                       </block>
                                                                                                                     </value>
